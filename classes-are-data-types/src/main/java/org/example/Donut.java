@@ -1,6 +1,9 @@
 package org.example;
 
 public class Donut {
+    /*
+     *  CONSTRUCTORS
+     */
     public Donut(int calories, double price, boolean hasSprinkles, String name, String description) {
         this.calories = calories;
         this.price = price;
@@ -9,11 +12,20 @@ public class Donut {
         this.description = description;
     }
 
+    /*
+     * FIELDS = non-static member variables
+     *
+     * These are shared by all non-static methods
+     */
     private int calories;
     private double price;
     private boolean hasSprinkles;
     private String name;
     private String description;
+
+    /*
+     *  SETTERS AND GETTERS
+     */
 
     public int getCalories() {
         return calories;
@@ -55,6 +67,16 @@ public class Donut {
         this.description = description;
     }
 
+    // A computed value
+    public double getPricePerCalorie(){
+        return price / calories;
+    }
+
+
+    /*
+     * toString method overrides the automatically provided one
+     *
+     */
     @Override
     public String toString() {
         return "Donut{" +
