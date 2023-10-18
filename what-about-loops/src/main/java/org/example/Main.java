@@ -3,6 +3,7 @@ package org.example;
 import java.util.Scanner;
 
 public class Main {
+
     static Scanner scanner;
 
     public static void main(String[] args) {
@@ -10,13 +11,13 @@ public class Main {
         int[] numbers = {1, 2, 3, 4, 5, 6, 7, 8, 9};
 
         /*
-         * The while loop
+         * The while loop repeats as long as the test is true
          */
 
         // initialize a variable
         int index = 0;
 
-        // test variable before each loop
+        // test the variable BEFORE each loop
         while (index < numbers.length) {
             System.out.println(numbers[index]);
 
@@ -27,7 +28,7 @@ public class Main {
 
 
         /*
-         * The for loop
+         * The for loop tests BEFORE each loop, and modifies AFTER each loop
          */
 
         // initializer, test, and modifier are all in the same parens
@@ -37,7 +38,7 @@ public class Main {
 
 
         /*
-         * The for-each loop
+         * The for-each loop or "enhanced for loop"
          */
 
         // Automatically goes through all elements in an array or collection
@@ -52,7 +53,8 @@ public class Main {
 
         scanner = new Scanner(System.in);
 
-        boolean busy = false;
+
+        boolean inputIsGood;
 
         // Goes through loop AT LEAST ONCE
         do {
@@ -64,6 +66,9 @@ public class Main {
             System.out.print("Pick one:  ");
 
             String input = scanner.nextLine();
+
+            // Assume input is good unless proved otherwise
+            inputIsGood = true;
 
             switch (input) {
                 case "1":
@@ -77,12 +82,23 @@ public class Main {
                     break;
                 default:
                     System.out.println("I didn't get that....");
-                    busy = true;
+                    inputIsGood = false;
             }
 
-        } while (busy);
+        } while (!inputIsGood);
 
 
+        /*
+         * LOOPS and SWITCHES - the final solution !!
+         *
+         * Separate the loop and the switch into different
+         * methods to make it easier to understand
+         *
+         * The loop repeats the prompt
+         * The switch deals with the input
+         *
+         *
+         */
         // do-while loop with method to test whether we are done
         do {
             System.out.println("""
@@ -94,7 +110,10 @@ public class Main {
 
         } while (!inputIsGood());
 
+
     }
+
+
 
     static boolean inputIsGood() {
         String input = scanner.nextLine();
@@ -114,4 +133,7 @@ public class Main {
         }
         return true;
     }
+
+
+
 }
