@@ -10,6 +10,7 @@ public class Main {
                 "Diet donut",
                 "Why you hate the donut so much?");
 
+        // Can't call private method
         // cronut.setCalories(15);
 
         System.out.println(cronut.getName() + " has " + cronut.getCalories() + " calories");
