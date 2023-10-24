@@ -1,9 +1,9 @@
 package org.example;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 public class Main {
     public static void main(String[] args) {
@@ -23,8 +23,11 @@ public class Main {
             int calories = Integer.parseInt(donutData[1]);
             double price = Double.parseDouble(donutData[2]);
 
+            // donutDate[3] has the production date
+            LocalDate productionDate = LocalDate.parse(donutData[3]);
+
             // Time to make the donut!
-            d = new Donut(name, calories, price);
+            d = new Donut(name, calories, price, productionDate);
 
         } catch (Exception e) {
             throw new RuntimeException(e);
