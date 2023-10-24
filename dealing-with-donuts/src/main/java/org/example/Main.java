@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
@@ -11,11 +12,27 @@ public class Main {
 
         // Create a donut
         Donut d = null;
+        String fileName = "donuts.csv";
 
+        d = readDonutFromFile(fileName);
+
+        // Print a donut
+        System.out.println(d);
+
+    }
+
+    private static ArrayList<Donut> readAllDonutsFromFile(String fileName){
+        ArrayList<Donut> donuts = new ArrayList<>();
+
+        return donuts;
+    }
+
+    private static Donut readDonutFromFile(String fileName) {
+        Donut d;
         // Read a donut
         BufferedReader donutFileReader = null;
         try {
-            donutFileReader = new BufferedReader(new FileReader("donuts.csv"));
+            donutFileReader = new BufferedReader(new FileReader(fileName));
             String donutString = donutFileReader.readLine();
             String[] donutData = donutString.split("\\|");
             // Convert each string to the correct type
@@ -32,9 +49,6 @@ public class Main {
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
-
-        // Print a donut
-        System.out.println(d);
-
+        return d;
     }
 }
