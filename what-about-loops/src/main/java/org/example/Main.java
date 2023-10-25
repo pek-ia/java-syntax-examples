@@ -54,6 +54,7 @@ public class Main {
         scanner = new Scanner(System.in);
 
 
+/*
         boolean inputIsGood;
 
         // Goes through loop AT LEAST ONCE
@@ -86,8 +87,15 @@ public class Main {
             }
 
         } while (!inputIsGood);
+*/
 
 
+        showMenu2();
+
+
+    }
+
+    private static void showMenu2() {
         /*
          * LOOPS and SWITCHES - the final solution !!
          *
@@ -108,14 +116,13 @@ public class Main {
                     """);
             System.out.print("Pick one:  ");
 
-        } while (!inputIsGood());
+        } while (inputIsBad());
 
-
+        return;
     }
 
 
-
-    static boolean inputIsGood() {
+    static boolean inputIsBad() {
         String input = scanner.nextLine();
         switch (input) {
             case "1":
@@ -129,9 +136,9 @@ public class Main {
                 break;
             default:
                 System.out.println("I didn't get that....");
-                return false;
+                return true;
         }
-        return true;
+        return false;
     }
 
 
