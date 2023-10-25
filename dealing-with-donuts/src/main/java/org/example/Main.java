@@ -1,7 +1,9 @@
 package org.example;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.Reader;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -30,9 +32,7 @@ public class Main {
     private static Donut readDonutFromFile(String fileName) {
         Donut d;
         // Read a donut
-        BufferedReader donutFileReader = null;
-        try {
-            donutFileReader = new BufferedReader(new FileReader(fileName));
+        try (BufferedReader donutFileReader = openFileReader(fileName)){
             String donutString = donutFileReader.readLine();
             String[] donutData = donutString.split("\\|");
             // Convert each string to the correct type
@@ -50,5 +50,11 @@ public class Main {
             throw new RuntimeException(e);
         }
         return d;
+    }
+
+    private static BufferedReader openFileReader(String fileName) throws FileNotFoundException {
+        BufferedReader donutFileReader;
+        donutFileReader = new BufferedReader(new FileReader(fileName));
+        return donutFileReader;
     }
 }
