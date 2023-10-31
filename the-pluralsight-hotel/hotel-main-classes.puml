@@ -1,0 +1,35 @@
+@startuml
+class pluralsight.hotel.FrontDesk {
++ void makeReservation(LocalDate,LocalDate,Guest,RoomType)
+}
+class pluralsight.hotel.Room {
+~ int number
+~ boolean available
+~ boolean isClean
+~ RoomType roomType
+}
+class pluralsight.hotel.RoomKey {
+~ Object someSortOfCredentialForTheDoor
+}
+class pluralsight.hotel.Reservation {
+~ LocalDate start
+~ LocalDate end
+~ Room room
+~ Guest guest
+~ List<RoomKey> keys
+~ RoomType requestedType
+}
+class pluralsight.hotel.Hotel {
+~ List<Room> rooms
+~ List<Reservation> reservations
+~ FrontDesk frontDesk
+}
+class pluralsight.hotel.Guest {
+~ String name
+~ String address
+}
+class pluralsight.hotel.RoomType {
+}
+
+
+@enduml
