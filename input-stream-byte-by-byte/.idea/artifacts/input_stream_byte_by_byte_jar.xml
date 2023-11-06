@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="input-stream-byte-by-byte:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/input_stream_byte_by_byte_jar</output-path>
+    <root id="archive" name="input-stream-byte-by-byte.jar">
+      <element id="module-output" name="input-stream-byte-by-byte" />
+    </root>
+  </artifact>
+</component>
