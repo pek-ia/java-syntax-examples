@@ -9,6 +9,13 @@ public class Convoy {
         convoy.add(v);
     }
 
+    /*
+     * A Convoy is a group of vehicles that may travel together
+     *
+     * A convoy may encounter a hazard that affects the health of
+     * all the vehicles in the convoy.
+     *
+     */
     public int hitCactus() {
         int result = 0;
         for (Vehicle v: convoy) {

@@ -21,7 +21,6 @@ class VehicleTest {
         v.hitCactus();
         int after = v.getHitPoints();
         assertTrue( before - after == 30);
-
     }
 
 
