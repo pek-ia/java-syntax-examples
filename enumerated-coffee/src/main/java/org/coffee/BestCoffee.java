@@ -18,5 +18,8 @@ public class BestCoffee {
 
     public void drink(){
         System.out.println("Drinking my " + size + " coffee!!!");
+        if (size == CoffeeSize.EXTRA_LARGE){
+            System.out.println("That was really big!");
+        }
     }
 }
