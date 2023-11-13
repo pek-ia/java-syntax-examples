@@ -11,6 +11,9 @@ public class CoffeeShopMain {
 
 
         c.setSize(CoffeeSize.EXTRA_LARGE);
+        c.addTopping(Topping.CINNAMON);
+        c.addTopping(Topping.WHIPPED_CREAM);
+        c.addTopping(Topping.UNICORN_FUR);
 
         c.drink();
 
