@@ -22,20 +22,10 @@ public class BetterCoffee {
     }
 
     public void drink() {
-        // I have an integer; I WANT a String
+        // I have a string, but it could be anything?
+        // Not really much better, is it?
         String s = size;
 
-//        if (size == SMALL) {
-//            s = "SMALL";
-//        } else if (size == MEDIUM) {
-//            s = "MEDIUM";
-//        } else if (size == LARGE) {
-//            s = "LARGE";
-//        } else if (size == EXTRA_LARGE) {
-//            s = "EXTRA LARGE";
-//        } else {
-//            s = "Default size";
-//        }
 
         System.out.println("Drinking my " + s + " coffee!");
     }

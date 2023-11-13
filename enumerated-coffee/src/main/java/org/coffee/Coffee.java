@@ -23,6 +23,7 @@ public class Coffee {
 
     public void drink() {
         // I have an integer; I WANT a String
+        // This gets ugly pretty fast
         String s;
 
         if (size == SMALL) {
