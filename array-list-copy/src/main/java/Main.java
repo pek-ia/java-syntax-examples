@@ -5,7 +5,7 @@ public class Main {
 
         ArrayList<Vehicle> vehicles = new ArrayList<>();
 
-        vehicles.add(new Vehicle(1234, "red", "Mustang"));
+        vehicles.add(new Vehicle(1234, "red", "Charger"));
 
         ArrayList<Vehicle> vehiclesCopy = new ArrayList<>(vehicles);
 
