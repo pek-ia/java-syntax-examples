@@ -1,0 +1,24 @@
+@startuml
+class org.animalfarm.Shark {
+}
+class org.animalfarm.Goat {
+}
+class org.animalfarm.Dog {
+}
+class org.animalfarm.Sheep {
+}
+class org.animalfarm.Cow {
+}
+class org.animalfarm.Lion {
+}
+class org.animalfarm.Animal {
+}
+class org.animalfarm.Chicken {
+}
+class org.animalfarm.BarnCat {
+}
+class org.animalfarm.AnimalFarm {
+}
+class org.animalfarm.Pig {
+}
+@enduml
