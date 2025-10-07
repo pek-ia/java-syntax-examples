@@ -1,2 +1,4 @@
-package pluralsight.hotel;public class Room {
+package pluralsight.hotel;
+
+public class Room {
 }
