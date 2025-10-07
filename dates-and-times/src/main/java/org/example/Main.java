@@ -28,15 +28,15 @@ public class Main {
         // LocalDateTime knows both
 
 
-        // Exactly 4 pattern letters uses the full form?
+        // Let's find the date/time and print to the terminal
+        // Exactly 4 pattern letters uses the full form of the week day?
         LocalDateTime rightNow = LocalDateTime.now();
         DateTimeFormatter hourOfDayAndDayOfWeek = DateTimeFormatter.ofPattern("HH:mm 'on' EEEE");
-        // println outputs a newline at the end
+        // println() outputs a newline at the end
         System.out.println(hourOfDayAndDayOfWeek.format(rightNow));
 
-        // write does not! I'll add it myself
+        // write() does not add a newline, so I'll add it myself
         BufferedWriter writer = null;
-
 
         try {
             writer = new BufferedWriter(new FileWriter("today.txt"));
@@ -58,7 +58,7 @@ public class Main {
         // }
         LocalDateTime birthday = LocalDateTime.of(1956, 3, 4, 6, 45);
         try (BufferedWriter writer1 = new BufferedWriter(new FileWriter("birthday.txt"));
-             FileWriter f = new FileWriter("notused.txt")){
+             FileWriter f = new FileWriter("another_file.txt")){
             writer1.write(hourOfDayAndDayOfWeek.format(birthday) + "\n");
         }
         catch (IOException e) {
