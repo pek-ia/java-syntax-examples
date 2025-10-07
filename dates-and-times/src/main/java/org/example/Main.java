@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
@@ -48,7 +47,7 @@ public class Main {
             try {
                 writer.close();
             }
-            catch (Exception e){};
+            catch (Exception ignored){}
         }
 
         // try-with-resources automatically closes streams
